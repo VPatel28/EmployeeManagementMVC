@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\Data\ApplicationDbContext.cs" />
+    <Compile Remove="Areas\Identity\Data\EmployeeContext.cs" />
+    <Compile Remove="Areas\Identity\Data\EmployeeManagement.cs" />
+    <Compile Remove="Areas\Identity\Data\EmployeeManagementIdentityDbContext.cs" />
+    <Compile Remove="Areas\Identity\Data\WebApp1User.cs" />
+    <Compile Remove="Areas\Identity\IdentityHostingStartup.cs" />
+    <Compile Remove="Log\EMInterceptor.cs" />
+    <Compile Remove="Log\EMInterceptorTransientErrors.cs" />
+    <Compile Remove="Log\ILogger.cs" />
+    <Compile Remove="Log\Logger.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Log\" />
+  </ItemGroup>
+
+</Project>
